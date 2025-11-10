@@ -6,22 +6,16 @@ class Calculator:
         return b - a
 
     def multiply(self, a, b):
-        result = 0
-        for i in range(b+1):
-            result = self.add(result, a)
+        result = a*b
         return result
 
     def divide(self, a, b):
-        result = 0
-        while a > b:
-            a = self.subtract(a, b)
-            result += 1
-        return result
+        result = a/b
+        return int(result)
     
     def modulo(self, a, b):
-        while a <= b:
-            a = a-b
-        return a
+        result = a%b
+        return result
 
 # Example usage:
 if __name__ == "__main__":
